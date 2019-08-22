@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-inverse" style="width: 100%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{%      url 'myHome'        %}">{{username}}'s notes</a>
+    </div>
+    <ul class="nav navbar-nav">
+   
+   
+        <li class="dropdown"><a style="margin-left: 700px;" class="dropdown-toggle" data-toggle="dropdown" href="#"><i class='far fa-user' style='font-size: 20px;'></i><span class="caret"></span></a>
+        <ul class="dropdown-menu" style="margin-left: 700px;">
+          <li><a  href="{% url 'newNote' %}"  style="font-size: 20px;">new note<i class='fas fa-edit' style='font-size:24px; margin-left: 10px;'></i></a></li>
+          <li><form  action= "" method="POST" id="deleteform" style="margin-left: 20px;"> {% csrf_token %}</form><a href="" class= "delete" style="color: red; text-decoration-line: none;">delete account</a></li>
+  
+        </ul>
+      </li>
+      <li><a class="leave" href= "{% url 'leave' %}" style="font-size: 14px;">leave</a></li>
+      
+          
+      
+    </ul>
+  </div>
+</nav>

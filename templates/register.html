@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel = "stylesheet" type = "text/css" href = "{% static 'css/register.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+
+
+<div class="container">
+  <h2>register</h2></br>
+  <form action="" class="form" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">pick username</label></br>
+     <span>{{form.username}}</span>
+    </div>
+    <div class="form-group">
+       <label for="password">pick password</label></br>
+      <span class="first">{{form.password}}</span>
+    </div></br>
+    <button type="submit" id="button" class="btn btn-default">new user!</button>
+  </form>
+  <span class="error"></span>
+</div>
+</br>
+
+<a href="{% url 'myLogin' %}">already have an account? login</a>
+
+
+{% if messages %}
+    {% for message in messages %}
+ <div class="alert alert-warning alert-dismissible" id="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+<span> {{ message }}</span>
+  </div>
+    {% endfor %}
+{% endif %}
+
+
+	
+
+</body>
+</html>

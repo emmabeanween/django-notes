@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% load static  %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "{% static 'css/login.css' %}">
+
+</head>
+<body>
+
+
+<div class="container">
+  <h2>login</h2>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">username</label></br>
+     <span>{{form.username}}</span>
+    </div>
+    <div class="form-group">
+       <label for="password">password</label></br>
+      <span>{{form.password}}</span>
+    </div>
+    <button type="submit" id="button" class="btn btn-default">you're in!</button>
+  </form>
+</div>
+</br>
+
+<a href="{% url 'myRegister' %}">don't have an account? register</a>
+
+
+
+{% if messages %}
+    {% for message in messages %}
+ <div class="alert alert-warning alert-dismissible" id="alert">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+<span> {{ message }}</span>
+  </div>
+    {% endfor %}
+{% endif %}
+
+
+
+
+
+</body>
+</html>
+

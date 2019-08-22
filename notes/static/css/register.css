@@ -1,0 +1,75 @@
+.container {
+
+  margin-left: 400px;
+  width: 455px;
+  height: 330px;
+  margin-top: 200px;
+  background-color: #310742;
+  border: 0.5px solid black;
+
+
+}
+
+form {
+
+  margin-left: 10px;
+}
+
+
+h2 {
+  margin-left: 120px;
+  font-size: 50px;
+  color: white;
+
+
+}
+
+#login{
+margin-left: 170px;
+}
+
+label {
+ color: white;
+}
+
+
+#id_username {
+width: 400px;
+height: 40px;
+font-size: 20px;
+}
+
+#id_password{
+width: 400px;
+height: 40px;
+font-size: 20px;
+}
+
+#button {
+
+  margin-left: 150px;
+  border: 0.5px solid blue;
+}
+
+a {
+
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  text-decoration-line: none;
+  margin-left: 500px;
+  font-family: 'Helvetica';
+
+
+}
+
+a:hover {
+
+  color: white;
+}
+
+
+body {
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(83,9,121,0.861782212885154) 30%, rgba(25,13,36,1) 100%);
+}
