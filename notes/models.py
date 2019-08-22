@@ -19,41 +19,6 @@ class Note(models.Model):
 
 
 
-#delete account - ajax post, no data, on backend in home:
-#if request.method == 'POST' and request.is_ajax():
-#
-
-
-
-
-
-
-#chat: start at .html, window.redirect = 'chat.html'
-#function startChat() when first visited
-#in startChat(): parse IP, look for another IP, stop when two have connected to a port?, show status 'looking', 'connected'
-#'stop' button, 'textview' in startChat()
-#add via ajax: if IP = {data{'user':', 'message'}}
-#stop button hit - once, twice: down below
-#stopChat() - disconnect your IP or if other user disconnects, change 'stop' button to 'new', disable textview
-#when 'new' is hit (third time)- startChat() again
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
