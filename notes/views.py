@@ -21,7 +21,7 @@ def myLogin(request):
 		if filledForm.is_valid():
 			username = filledForm.cleaned_data['username']
 			password = filledForm.cleaned_data['password']
-			#check that username and password are valid, if so reneder(home) if not return render(request, login.html, form
+			#check that username and password are valid
 			user_exists = User.objects.filter(username = username, password=password ).all()
 			if len(user_exists) == 0:
 				messages.add_message(request, messages.INFO, 'Your username and/or password are incorrect.')
@@ -29,7 +29,7 @@ def myLogin(request):
 			else:
 				request.session['username'] = username
 				return redirect("myHome")
-			#see if username and password exist: User.objects.filter(username = username, password = password).all()
+			
 	return render(request, "login.html", {'form': LoginForm()})
 
 
